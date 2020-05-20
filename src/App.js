@@ -17,7 +17,7 @@ function App() {
             <li><a href="http://github.com/mrchenliang"><i className="fa fa-github icon"/></a></li>
           </ul>
         </p>
-        <footer><p>Copyright © Chen Liang 2019</p></footer>
+        <footer><p>Copyright © Chen Liang 2020</p></footer>
       </header>
     </div>
   );
