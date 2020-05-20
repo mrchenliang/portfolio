@@ -10,6 +10,7 @@ function App() {
         <img src={image} className="App-logo" alt="logo" />
         <p>
           Chen's Personal Portfolio
+          <a href="mailto:c.liang@ualberta.ca">c.liang@ualberta.ca</a>
           <ul className="Social-Icons">
             <li><a href="http://instagram.com/mr_chenliang"><i className="fa fa-instagram icon"/></a></li>
             <li><a href="http://twitter.com/mr_chenliang"><i className="fa fa-twitter icon"/></a></li>
