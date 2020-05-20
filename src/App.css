@@ -51,3 +51,9 @@ ul.Social-Icons {
   transform: scale(1.1);
   color: white;
 }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  font-size: 14px;
+}
