@@ -21,14 +21,11 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  z-index: 100;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-.header {
-  display: flex;
 }
 
 .info {
@@ -43,7 +40,7 @@
 
 ul.Social-Icons {
   display: flex;
-  width: 50VW;
+  width: 100vw;
   justify-content: center;
   list-style-type: none;
   padding: 16px;
@@ -75,8 +72,9 @@ ul.Social-Icons {
   background-color:white;
   border-radius: 10%;
 }
-audio {
-  color: white
+.pin {
+  color: red;
+  margin: 8px
 }
 
 .tooltip:hover .tooltiptext {

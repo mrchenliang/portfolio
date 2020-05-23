@@ -2,6 +2,8 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
 import image from './image.jpg';
 import './App.css';
+import ParticleComponent from "./ParticleComponent";
+
 
 function App() {
   return (
@@ -16,7 +18,7 @@ function App() {
               <b> Chen Liang</b></div>
             </div>
             <div className = 'title'>Software Engineer | Full Stack Developer</div>
-            <div className = 'location'> Toronto <span role="img" aria-label="Canada"> 🇨🇦</span></div>
+            <div className = 'location'><i className="fa fa-map-marker pin"/>Toronto <span role="img" aria-label="Canada">  🇨🇦</span></div>
           </div>
         </div>
           <ul className="Social-Icons">
@@ -53,7 +55,10 @@ function App() {
             </li>
           </ul>
         </p>
-        <footer><p>Copyright © Chen Liang 2020</p></footer>
+        <footer>
+          <p>Copyright © Chen Liang 2020</p>
+          <ParticleComponent />
+        </footer>
       </header>
     </div>
   );
