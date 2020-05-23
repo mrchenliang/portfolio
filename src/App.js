@@ -11,9 +11,12 @@ function App() {
         <div className = 'header'>
           <img src={image} className="App-logo" alt="logo" />
           <div className = 'info'>
-            <div>Chen Liang</div>
-            <div>Software Engineer | Full Stack Developer</div>
-            <div> Toronto <span role="img" aria-label="Canada"> 🇨🇦</span></div>
+            <div>Hello | 你好
+              <div>My name is
+              <b> Chen Liang</b></div>
+            </div>
+            <div className = 'title'>Software Engineer | Full Stack Developer</div>
+            <div className = 'location'> Toronto <span role="img" aria-label="Canada"> 🇨🇦</span></div>
           </div>
         </div>
           <ul className="Social-Icons">
