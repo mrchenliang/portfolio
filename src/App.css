@@ -13,7 +13,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -25,6 +25,14 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.header {
+  display: flex;
+}
+.info {
+  align-self: center;
+  padding: 16px;
 }
 
 ul.Social-Icons {
@@ -41,15 +49,35 @@ ul.Social-Icons {
   border-radius: 50%;
   border: white 3px solid;
   padding: 8px;
-  margin: 16px 8px;
+  margin: 16px 24px;
   transition: all .2s ease-in-out;
   color: white
 }
 
 :hover.icon {
   cursor: pointer;
-  transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+.tooltiptext {
+  visibility: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  font-size: 16px;
+  padding: 8px;
   color: white;
+  background-color: black;
+  border-radius: 10%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  display: inline-block;
+  position:absolute;
+  bottom: -100%;
+  left:50%;
+  transform:translateX(-50%);
+  text-align: center;
 }
 
 footer {
