@@ -26,10 +26,10 @@ export default () => (
             value: "#ffffff"
           },
           shape: {
-            type: "circle",
+            type: "polygon",
             stroke: {
               width: 2,
-              color: "#000000"
+              color: "#ffffff"
             },
             polygon: {
               nb_sides: 4
@@ -41,11 +41,11 @@ export default () => (
             }
           },
           opacity: {
-            value: 0.4008530152163807,
+            value: 0.3,
             random: false,
             anim: {
               enable: false,
-              speed: 1,
+              speed: 0.5,
               opacity_min: 0.1,
               sync: false
             }
@@ -57,15 +57,15 @@ export default () => (
               enable: false,
               speed: 40,
               size_min: 0.1,
-              sync: false
+              sync: true
             }
           },
           line_linked: {
             enable: true,
-            distance: 0,
+            distance: 50,
             color: "#ffffff",
-            opacity: 0.3687847739990702,
-            width: 0.6413648243462091
+            opacity: 0.3,
+            width: 0.5
           },
           move: {
             enable: true,

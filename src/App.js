@@ -9,6 +9,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+      <ParticleComponent />
         <p>
         <div className = 'header'>
           <img src={image} className="App-logo" alt="logo" />
@@ -57,7 +58,6 @@ function App() {
         </p>
         <footer>
           <p>Copyright © Chen Liang 2020</p>
-          <ParticleComponent />
         </footer>
       </header>
     </div>
