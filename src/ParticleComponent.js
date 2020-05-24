@@ -16,10 +16,10 @@ export default () => (
       params={{
         particles: {
           number: {
-            value: 150,
+            value: 125,
             density: {
               enable: true,
-              value_area: 50000
+              value_area: 100000
             }
           },
           color: {
@@ -90,10 +90,10 @@ export default () => (
               mode: "grab"
             },
             onclick: {
-              enable: false,
-              mode: "bubble"
+              enable: true,
+              mode: "push"
             },
-            resize: true
+            resize: false
           },
           modes: {
             grab: {
