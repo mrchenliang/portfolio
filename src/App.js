@@ -51,7 +51,7 @@ function App() {
             </li>
             <li>
               <div>
-                <a href="http://chenliang.ca/resume" rel="noopener noreferrer" target="_blank"><i className="fa fa-file icon tooltip"><div className = 'tooltiptext'>Resume</div></i></a>              
+                <a href="/portfolio/Chen_Liang_Resume.pdf" rel="noopener noreferrer" target="_blank"><i className="fa fa-file icon tooltip"><div className = 'tooltiptext'>Resume</div></i></a>              
               </div>
             </li>
           </ul>
