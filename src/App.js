@@ -49,11 +49,11 @@ function App() {
                 <a href="http://github.com/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-github icon tooltip"><div className = 'tooltiptext'>Github</div></i></a>              
               </div>
             </li>
-            <li>
+            {/* <li>
               <div>
                 <a href="/portfolio/Chen_Liang_Resume.pdf" rel="noopener noreferrer" target="_blank"><i className="fa fa-file icon tooltip"><div className = 'tooltiptext'>Resume</div></i></a>              
               </div>
-            </li>
+            </li> */}
           </ul>
         </p>
         <footer>
