@@ -101,7 +101,7 @@ ul.Social-Icons {
   visibility: visible;
   display: inline-block;
   position:absolute;
-  bottom: -110%;
+  bottom: 125%;
   left:50%;
   transform:translateX(-50%);
   text-align: center;
