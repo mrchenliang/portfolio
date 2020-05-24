@@ -19,7 +19,7 @@ export default () => (
             value: 150,
             density: {
               enable: true,
-              value_area: 1803.4120608655228
+              value_area: 50000
             }
           },
           color: {
@@ -87,7 +87,7 @@ export default () => (
           events: {
             onhover: {
               enable: true,
-              mode: "repulse"
+              mode: "grab"
             },
             onclick: {
               enable: false,
