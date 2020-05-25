@@ -29,7 +29,6 @@ function App() {
             <br/>
             In my career, I have sought out diverse opportunities to apply my technical skills.
           </div>
-          <br/>
           <div className = 'hobbies'>
           I also enjoy: 
             <span role="img" aria-label="Tech"> 💻 |</span>

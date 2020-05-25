@@ -12,8 +12,6 @@
 @media (prefers-reduced-motion: no-preference) {
 }
 
-
-
 #tsparticles {
   position: absolute;
   width: 100%;
@@ -45,7 +43,7 @@ p {
 .info {
   align-self: center;
   font-size: 24px;
-  padding: 32px;
+  padding: 16px 24px;
   padding-bottom: 8px;
 }
 .title, .location, .hobbies, .about {
@@ -54,7 +52,7 @@ p {
 }
 
 .about, .hobbies {
-  padding: 24px;
+  padding: 16px 24px;
   margin-top: 0;
   line-height: 1.5;
 }
@@ -120,7 +118,7 @@ footer {
     margin-top: 8px;
   }
   footer {
-    bottom: -20%;
+    bottom: -15%;
   }
 
 }
