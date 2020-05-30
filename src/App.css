@@ -107,8 +107,6 @@ ul.Social-Icons {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
   font-size: 14px;
 }
 
@@ -116,9 +114,6 @@ footer {
   .title, .location, .hobbies, .about {
     font-size: 12px;
     margin-top: 8px;
-  }
-  footer {
-    bottom: -15%;
   }
 
 }

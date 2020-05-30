@@ -6,6 +6,9 @@ import ParticleComponent from "./ParticleComponent";
 
 
 function App() {
+
+  let year = new Date().getFullYear();
+
   return (
     <div className="App">
       <header className="App-header">
@@ -73,7 +76,7 @@ function App() {
           </div>
         </p>
         <footer>
-          <p>Copyright © Chen Liang 2020</p>
+          <p>Copyright © Chen Liang {year}</p>
         </footer>
       </header>
     </div>
