@@ -66,7 +66,7 @@ function App() {
             </li>
             {/* <li>
               <div>
-                <a href="/portfolio/resume.pdf" rel="noopener noreferrer" target="_blank"><i className="fa fa-file icon tooltip"><div className = 'tooltiptext'>Resume</div></i></a>              
+                <a href="/resume.pdf" rel="noopener noreferrer" target="_blank"><i className="fa fa-file icon tooltip"><div className = 'tooltiptext'>Resume</div></i></a>              
               </div>
             </li> */}
           </ul>
