@@ -1,5 +1,4 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import image from './image.jpg';
 import './App.css';
@@ -74,28 +73,28 @@ function App() {
           <ul className="Social-Icons">
             <li>
               <div>
-                <a href="mailto:hi@chenliang.ca" rel="noopener noreferrer" target="_blank"><i className="fa fa-envelope icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Email</div></i>
+                <a href="mailto:hi@chenliang.ca" rel="noopener noreferrer" target="_blank"><i className="fa fa-envelope icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Email</div></i>
                 </a>
               </div>
             </li>
             <li>
               <div>
-                <a href="http://instagram.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-instagram icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Instagram</div></i></a>              
+                <a href="http://instagram.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-instagram icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Instagram</div></i></a>              
               </div>
             </li>
             <li>
               <div>
-                <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Twitter</div></i></a>              
+                <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Twitter</div></i></a>              
               </div>
             </li>
             <li>
               <div>
-                <a href="http://linkedin.com/in/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-linkedin icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>LinkedIn</div></i></a>              
+                <a href="http://linkedin.com/in/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-linkedin icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>LinkedIn</div></i></a>              
               </div>
             </li>
             <li>
               <div>
-                <a href="http://github.com/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-github icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Github</div></i></a>              
+                <a href="http://github.com/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-github icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Github</div></i></a>              
               </div>
             </li>
             {/* <li>

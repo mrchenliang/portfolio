@@ -63,11 +63,9 @@ ul.Social-Icons {
 
 .icon {
   border-radius: 50%;
-  border: #fff 3px solid;
   padding: 8px;
   margin: 16px 8px;
   transition: all .2s ease-in-out;
-  color: #fff
 }
 
 :hover.icon {
