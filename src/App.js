@@ -74,7 +74,7 @@ function App() {
           <ul className="Social-Icons">
             <li>
               <div>
-                <a href="mailto:c.liang@ualberta.ca" rel="noopener noreferrer" target="_blank"><i className="fa fa-envelope icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Email</div></i>
+                <a href="mailto:hi@chenliang.ca" rel="noopener noreferrer" target="_blank"><i className="fa fa-envelope icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Email</div></i>
                 </a>
               </div>
             </li>
