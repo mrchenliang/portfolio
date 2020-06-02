@@ -126,6 +126,9 @@ footer {
 
 .toggle {
   cursor: pointer;
+  position: absolute;
+  right: 5%;
+  top: 5%;
 }
 
 
