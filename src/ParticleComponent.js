@@ -1,7 +1,7 @@
 import React from "react";
 import Particles from "react-particles-js";
 
-export default () => (
+export default (props) => (
   <div
     style={{
       position: "absolute",
@@ -23,13 +23,13 @@ export default () => (
             }
           },
           color: {
-            value: "#ffffff"
+            value: `${props.color}`
           },
           shape: {
             type: "polygon",
             stroke: {
               width: 2,
-              color: "#ffffff"
+              color: `${props.color}`
             },
             polygon: {
               nb_sides: 4
@@ -63,7 +63,7 @@ export default () => (
           line_linked: {
             enable: true,
             distance: 50,
-            color: "#ffffff",
+            color: `${props.color}`,
             opacity: 0.3,
             width: 0.5
           },

@@ -6,7 +6,7 @@
   height: 40vmin;
   pointer-events: none;
   border-radius: 50%;
-  border: white 3px solid;
+  border: #fff 3px solid;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -25,19 +25,13 @@ p {
 }
 
 .App-header {
-  background-color: #000000;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
   z-index: 100;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 .info {
@@ -69,11 +63,11 @@ ul.Social-Icons {
 
 .icon {
   border-radius: 50%;
-  border: white 3px solid;
+  border: #fff 3px solid;
   padding: 8px;
   margin: 16px 8px;
   transition: all .2s ease-in-out;
-  color: white
+  color: #fff
 }
 
 :hover.icon {
@@ -87,8 +81,6 @@ ul.Social-Icons {
   position: absolute;
   font-size: 12px;
   padding: 4px 8px;
-  color: black;
-  background-color:white;
   border-radius: 10%;
 }
 .pin {
@@ -117,3 +109,23 @@ footer {
   }
 
 }
+/* toggle dark/light modes */
+.dark-mode {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  transition: background-color 0.5s ease-in;
+}
+
+.light-mode {
+  background-color: #fff;
+  color: #333;
+  text-align: center;
+  transition: background-color 0.5s ease-out;
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+

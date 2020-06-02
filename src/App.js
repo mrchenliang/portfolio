@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import 'font-awesome/css/font-awesome.min.css';
 import image from './image.jpg';
 import './App.css';
@@ -6,20 +7,50 @@ import ParticleComponent from "./ParticleComponent";
 
 
 function App() {
+  const year = new Date().getFullYear();
 
-  let year = new Date().getFullYear();
+  const [darkMode, setDarkMode] = React.useState(getInitialMode())  
+  React.useEffect(() => {
+    localStorage.setItem('dark', JSON.stringify(darkMode));
+  }, [darkMode]);
+  
+  function getInitialMode() {
+    const isReturningUser = 'dark' in localStorage;
+    const savedMode = JSON.parse(localStorage.getItem('dark'));
+    const userPrefersDark = getPrefColorScheme();
+    // if mode was saved -> dark / light
+    if(isReturningUser) {
+      return savedMode;
+      // if preferred color scheme is dark -> dark
+    } else if (userPrefersDark) {
+      return true;
+      // otherwise -> light
+    } else {
+      return false;
+    }
+  }
 
+  function getPrefColorScheme() {
+    if(!window.matchMedia) return;
+    return window.matchMedia("(prefers-color-scheme: dark)").matches;
+  }
   return (
-    <div className="App">
+    <div className={'App', `${darkMode ? 'dark-mode' : 'light-mode'}`}>
       <header className="App-header">
-      <ParticleComponent />
-        <p>
+      <ParticleComponent color={darkMode ?  '#fff' : '#333'}/>
+        <p className>
+          <span className = 'toggle'>
+            <span onClick={() => setDarkMode(prevMode => !prevMode)}>{darkMode ? '☀️' : '🌚'}</span>
+          </span>
         <div className = 'header'>
           <img src={image} className="App-logo" alt="logo" />
           <div className = 'info'>
             <div>Hello | 你好
               <div>
                 My name is <b> Chen Liang</b>
+                <div className = 'toggle-container'>
+
+                </div>
               </div>
             </div>
             <div className = 'title'>Software Engineer | Full Stack Developer</div>
@@ -43,28 +74,28 @@ function App() {
           <ul className="Social-Icons">
             <li>
               <div>
-                <a href="mailto:c.liang@ualberta.ca" rel="noopener noreferrer" target="_blank"><i className="fa fa-envelope icon tooltip"><div className = 'tooltiptext'>Email</div></i>
+                <a href="mailto:c.liang@ualberta.ca" rel="noopener noreferrer" target="_blank"><i className="fa fa-envelope icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Email</div></i>
                 </a>
               </div>
             </li>
             <li>
               <div>
-                <a href="http://instagram.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-instagram icon tooltip"><div className = 'tooltiptext'>Instagram</div></i></a>              
+                <a href="http://instagram.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-instagram icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Instagram</div></i></a>              
               </div>
             </li>
             <li>
               <div>
-                <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip"><div className = 'tooltiptext'>Twitter</div></i></a>              
+                <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Twitter</div></i></a>              
               </div>
             </li>
             <li>
               <div>
-                <a href="http://linkedin.com/in/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-linkedin icon tooltip"><div className = 'tooltiptext'>LinkedIn</div></i></a>              
+                <a href="http://linkedin.com/in/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-linkedin icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>LinkedIn</div></i></a>              
               </div>
             </li>
             <li>
               <div>
-                <a href="http://github.com/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-github icon tooltip"><div className = 'tooltiptext'>Github</div></i></a>              
+                <a href="http://github.com/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-github icon tooltip" style ={{color: darkMode ? '#fff' : '#333'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Github</div></i></a>              
               </div>
             </li>
             {/* <li>
