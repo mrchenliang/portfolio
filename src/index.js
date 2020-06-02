@@ -9,8 +9,8 @@ const routing = (
   <Router>
     <React.StrictMode>
     <div>
-      <Route strict path="/resume" render={() => {window.location.href="./resume.pdf"}} />
-      <Route strict path="/resume/" render={() => {window.location.href="./resume.pdf"}} />
+      <Route strict path="/resume" render={() => {window.location.href="/resume.pdf"}} />
+      <Route strict path="/resume/" render={() => {window.location.href="/resume.pdf"}} />
       <Route path="/" component={App} />
     </div>
     </React.StrictMode>
