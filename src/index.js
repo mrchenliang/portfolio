@@ -6,7 +6,7 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-  <Router>
+  <Router basename = {process.env.PUBLIC_URL}>
     <React.StrictMode>
     <div>
       <Route strict path="/resume" render={() => {window.location.href="/resume.pdf"}} />
