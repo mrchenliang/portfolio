@@ -6,13 +6,13 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-  <Router>
+  <Router basename={process.env.PUBLIC_URL}>
     <React.StrictMode>
     <div>
       <Switch>
-        <Route exact path={process.env.PUBLIC_URL+ '/resume'} render={() => {window.location.href="/resume.pdf"}} />
-        <Route exact path={process.env.PUBLIC_URL+ '/resume/'} render={() => {window.location.href="/resume.pdf"}} />
-        <Route path={process.env.PUBLIC_URL+ '/'} component={App} />
+        <Route exact path="/resume" render={() => {window.location.href="/resume.pdf"}} />
+        <Route exacts path="/resume/" render={() => {window.location.href="/resume.pdf"}} />
+        <Route path="/" component={App} />
       </Switch>
     </div>
     </React.StrictMode>
