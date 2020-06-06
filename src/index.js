@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
-import Resume from './components/resume/resume'
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
@@ -11,8 +10,8 @@ const routing = (
     <React.StrictMode>
     <div>
       <Switch>
-        <Route path="/resume" component={Resume} />
-        <Route path="/resume/" component={Resume} />
+        <Route path="/resume" render={() => {window.location.href="https://chenliang.ca/resume.pdf"}} />
+        <Route path="/resume/" render={() => {window.location.href="https://chenliang.ca/resume.pdf"}} />
         <Route path="/" component={App} />
       </Switch>
     </div>
