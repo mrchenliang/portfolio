@@ -1,17 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, BrowserRouter as Router } from 'react-router-dom'
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom'
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
 const routing = (
-  <Router basename = {process.env.PUBLIC_URL}>
+  <Router>
     <React.StrictMode>
     <div>
-      <Route strict path="/resume" render={() => {window.location.href="/resume.pdf"}} />
-      <Route strict path="/resume/" render={() => {window.location.href="/resume.pdf"}} />
-      <Route path="/" component={App} />
+      <Switch>
+        <Route strict path="/resume" render={() => {window.location.href="/resume.pdf"}} />
+        <Route strict path="/resume/" render={() => {window.location.href="/resume.pdf"}} />
+        <Route path="/" component={App} />
+      </Switch>
     </div>
     </React.StrictMode>
   </Router>
