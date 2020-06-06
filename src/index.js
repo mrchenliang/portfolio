@@ -10,8 +10,8 @@ const routing = (
     <React.StrictMode>
     <div>
       <Switch>
-        <Route exact path="/resume" render={() => {window.location.href="/resume.pdf"}} />
-        <Route exacts path="/resume/" render={() => {window.location.href="/resume.pdf"}} />
+        <Route exact path="/resume" render={() => {window.location.href="https://chenliang.ca/resume.pdf"}} />
+        <Route exact path="/resume/" render={() => {window.location.href="https://chenliang.ca/resume.pdf"}} />
         <Route path="/" component={App} />
       </Switch>
     </div>
