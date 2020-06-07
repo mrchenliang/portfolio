@@ -1,6 +1,6 @@
 import React from 'react';
 import 'font-awesome/css/font-awesome.min.css';
-import image from './image.jpg';
+import image from './image.jpeg';
 import './App.css';
 import ParticleComponent from "./ParticleComponent";
 
@@ -34,7 +34,7 @@ function App() {
     return window.matchMedia("(prefers-color-scheme: dark)").matches;
   }
   return (
-    <div className={'App', `${darkMode ? 'dark-mode' : 'light-mode'}`}>
+    <div className={"App", `${darkMode ? 'dark-mode' : 'light-mode'}`}>;
       <header className="App-header">
       <ParticleComponent color={darkMode ?  '#fff' : '#333'}/>
         <p className>
