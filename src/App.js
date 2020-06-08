@@ -1,5 +1,5 @@
 import React from 'react';
-import 'font-awesome/css/font-awesome.min.css';
+import 'font-awesome/css/font-awesome.css';
 import image from './image.jpeg';
 import './App.css';
 import ParticleComponent from "./ParticleComponent";
@@ -85,6 +85,11 @@ function App() {
             <li>
               <div>
                 <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Twitter</div></i></a>              
+              </div>
+            </li>
+            <li>
+              <div>
+                <a href="http://medium.com/@chen.liang" rel="noopener noreferrer" target="_blank"><i className="fa fa-medium icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Medium</div></i></a>              
               </div>
             </li>
             <li>
