@@ -3,7 +3,7 @@ import React from 'react';
 import 'font-awesome/css/font-awesome.css';
 
 import ParticleComponent from "../../components/particles/ParticleComponent";
-// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import image from '../../assets/image.jpeg';
 import Footer from "../../components/footer/footer.component";
 
@@ -46,7 +46,11 @@ const Home = () => {
             <span onClick={() => setDarkMode(prevMode => !prevMode)}>{darkMode ? '☀️' : '🌚'}</span>
           </span>
           <div className = 'header'>
+          <ReactCSSTransitionGroup
+            transitionName="example" transitionAppear={true}
+            transitionAppearTimeout={700}>
             <img src={image} className="headshot" alt="logo" />
+          </ReactCSSTransitionGroup>
             <div className = 'info'>
               <div>Hello | 你好
                 <div>
