@@ -1,6 +1,7 @@
 
 import React from 'react';
 import 'font-awesome/css/font-awesome.css';
+import Typical from 'react-typical'
 
 import ParticleComponent from "../../components/particles/ParticleComponent";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
@@ -57,7 +58,18 @@ const Home = () => {
                   My name is <b> Chen Liang</b>
                 </div>
               </div>
-              <div className = 'title'>Software Engineer | Full Stack Developer</div>
+              <div className = 'title'>I am a {''}
+                <Typical 
+                  loop={Infinity}
+                  wrapper='b'
+                  steps={[
+                    'Software Engineer ⚙️', 
+                    1000,
+                    'Full Stack Developer 💻',
+                    1000,
+                  ]}
+                />
+            </div>
               <div className = 'location'><i className="fa fa-map-marker pin"/>Toronto <span role="img" aria-label="Canada">  🇨🇦</span></div>
             </div>
             <div className = 'about'>

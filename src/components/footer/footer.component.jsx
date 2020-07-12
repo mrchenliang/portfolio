@@ -24,11 +24,11 @@ const Footer = (props) => {
                   <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip" style ={{color: props.darkMode ? '#fff' : '#333', border : props.darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": props.darkMode ? '#fff' : '#333', color: props.darkMode ? '#333' : '#fff'}}>Twitter</div></i></a>              
                 </div>
               </li>
-              <li>
+              {/* <li>
                 <div>
                   <a href="http://medium.com/@chen.liang" rel="noopener noreferrer" target="_blank"><i className="fa fa-medium icon tooltip" style ={{color: props.darkMode ? '#fff' : '#333', border : props.darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": props.darkMode ? '#fff' : '#333', color: props.darkMode ? '#333' : '#fff'}}>Medium</div></i></a>              
                 </div>
-              </li>
+              </li> */}
               <li>
                 <div>
                   <a href="http://linkedin.com/in/mrchenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-linkedin icon tooltip" style ={{color: props.darkMode ? '#fff' : '#333', border : props.darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{"background-color": props.darkMode ? '#fff' : '#333', color: props.darkMode ? '#333' : '#fff'}}>LinkedIn</div></i></a>              
