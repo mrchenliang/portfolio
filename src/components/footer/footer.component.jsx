@@ -6,7 +6,7 @@ import './footer.styles.css';
 const Footer = (props) => {
     const year = new Date().getFullYear();
     return (
-            <div>
+            <div className = 'footer'>
             <ul className="Social-Icons">
               <li>
                 <div>
