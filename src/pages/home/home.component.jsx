@@ -9,8 +9,6 @@ import Footer from "../../components/footer/footer.component";
 
 const Home = () => {
 
-    const year = new Date().getFullYear();
-
     const [darkMode, setDarkMode] = React.useState(getInitialMode())  
     React.useEffect(() => {
       localStorage.setItem('dark', JSON.stringify(darkMode));
