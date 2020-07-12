@@ -1,10 +1,13 @@
 
 import React from 'react';
 import 'font-awesome/css/font-awesome.css';
-import image from '../../assets/image.jpeg';
-import './home.styles.css';
+
 import ParticleComponent from "../../components/particles/ParticleComponent";
+// import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import image from '../../assets/image.jpeg';
 import Footer from "../../components/footer/footer.component";
+
+import './home.styles.css';
 
 
 const Home = () => {
@@ -38,19 +41,16 @@ const Home = () => {
       <div className={"home-page", `${darkMode ? 'dark-mode' : 'light-mode'}`}>
         <header className="home-header">
         <ParticleComponent color={darkMode ?  '#fff' : '#333'}/>
-          <p className>
-            <span className = 'toggle'>
-              <span onClick={() => setDarkMode(prevMode => !prevMode)}>{darkMode ? '☀️' : '🌚'}</span>
-            </span>
+        <div className = "home-content">
+          <span className = 'toggle'>
+            <span onClick={() => setDarkMode(prevMode => !prevMode)}>{darkMode ? '☀️' : '🌚'}</span>
+          </span>
           <div className = 'header'>
             <img src={image} className="headshot" alt="logo" />
             <div className = 'info'>
               <div>Hello | 你好
                 <div>
                   My name is <b> Chen Liang</b>
-                  <div className = 'toggle-container'>
-  
-                  </div>
                 </div>
               </div>
               <div className = 'title'>Software Engineer | Full Stack Developer</div>
@@ -64,15 +64,15 @@ const Home = () => {
               In my career, I have sought out diverse opportunities to apply my technical skills.
             </div>
             <div className = 'hobbies'>
-            I also enjoy: 
+              I also enjoy: 
               <span role="img" aria-label="Tech"> 💻 |</span>
               <span role="img" aria-label="Beer"> 🍺 | </span>
               <span role="img" aria-label="Basketball"> 🏀 |</span> 
               <span role="img" aria-label="Coffee"> ☕️</span>
             </div>
-            <Footer darkMode = {darkMode}/>
-            </div>
-          </p>
+          </div>
+          </div>
+        <Footer darkMode = {darkMode}/>
         </header>
       </div>
     );
