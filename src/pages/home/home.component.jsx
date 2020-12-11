@@ -17,7 +17,10 @@ const Home = () => {
     React.useEffect(() => {
       localStorage.setItem('dark', JSON.stringify(darkMode));
     }, [darkMode]);
-    
+
+    const year = new Date(Date.now() - new Date("02/15/1995").getTime()).getUTCFullYear();  
+    const age = Math.abs(year - 1970);  
+
     function getInitialMode() {
       const isReturningUser = 'dark' in localStorage;
       const savedMode = JSON.parse(localStorage.getItem('dark'));
@@ -73,7 +76,7 @@ const Home = () => {
               <div className = 'location'><i className="fa fa-map-marker pin"/>Toronto <span role="img" aria-label="Canada">  🇨🇦</span></div>
             </div>
             <div className = 'about'>
-              I'm a 25-year-old, Chinese-Canadian.
+                I'm a   {age}-year-old, Chinese-Canadian.
               <br/>
               My passion is to work with talented individuals and solve complex problems with simple, elegant solutions.
               <br/>
