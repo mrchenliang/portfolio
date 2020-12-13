@@ -70,6 +70,8 @@ const Home = () => {
                     1000,
                     'Full Stack Developer 💻',
                     1000,
+                    'Mentor 👨‍🏫',
+                    1000,
                   ]}
                 />
             </div>
