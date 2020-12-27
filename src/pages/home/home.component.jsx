@@ -80,9 +80,9 @@ const Home = () => {
             <div className = 'about'>
                 I'm a {age}-year-old, Chinese-Canadian.
               <br/>
-              My passion is to work with talented individuals and solve complex problems with simple, elegant solutions.
+                My passion is to work with talented individuals and solve complex problems with simple, elegant solutions.
               <br/>
-              In my career, I have sought out diverse opportunities to apply my technical skills.
+                In my career, I have sought out diverse opportunities to apply my technical skills.
             </div>
             <div className = 'hobbies'>
               I also enjoy: 
