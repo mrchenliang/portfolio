@@ -16,8 +16,8 @@ class App extends React.Component {
           <meta name="description" content="Chen is a software engineer based out of Toronto, Canada. His passion is to work with talented individuals and solve complex problems with simple, elegant solutions." />
         </Helmet>
         <Switch>
-          <Route exact path="/resume" render={() => {window.location.href="/ChenLiang_Resume.pdf"}} />
-          <Route exact path="/resume/" render={() => {window.location.href="/ChenLiang_Resume.pdf"}} />
+          {/* <Route exact path="/resume" render={() => {window.location.href="/ChenLiang_Resume.pdf"}} /> */}
+          {/* <Route exact path="/resume/" render={() => {window.location.href="/ChenLiang_Resume.pdf"}} /> */}
           {/* <Route exact path="/projects" component={Project} /> */}
           {/* <Route exact path="/project" component={Project} /> */}
           <Route path="/" component={Home} />
