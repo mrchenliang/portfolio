@@ -1,7 +1,7 @@
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import 'font-awesome/css/font-awesome.css';
-import Typical from 'react-typical'
+import Typist from 'react-typist';
 
 import ParticleComponent from "../../components/particles/ParticleComponent";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
@@ -13,10 +13,9 @@ import './home.styles.css';
 
 const Home = () => {
 
-    const [darkMode, setDarkMode] = React.useState(getInitialMode())  
-    React.useEffect(() => {
-      localStorage.setItem('dark', JSON.stringify(darkMode));
-    }, [darkMode]);
+    const [darkMode, setDarkMode] = useState(getInitialMode())  
+    const [count, setCount] = useState(1);
+
 
     const year = new Date(Date.now() - new Date("02/15/1995").getTime()).getUTCFullYear();  
     const age = Math.abs(year - 1970);  
@@ -36,6 +35,14 @@ const Home = () => {
         return false;
       }
     }
+
+    useEffect(() => {
+      setCount(1);
+    }, [count]);
+    useEffect(() => {
+      localStorage.setItem('dark', JSON.stringify(darkMode));
+    }, [darkMode]);
+  
   
     function getPrefColorScheme() {
       if(!window.matchMedia) return;
@@ -61,22 +68,26 @@ const Home = () => {
                   My name is <b> Chen Liang</b>
                 </div>
               </div>
-              <div className = 'title'>I am a {''}
-                <Typical 
-                  loop={Infinity}
-                  wrapper='b'
-                  steps={[
-                    'Software Engineer ⚙️', 
-                    1000,
-                    'Full Stack Developer 💻',
-                    1000,
-                    'Mentor 👨‍🏫',
-                    1000,
-                  ]}
-                />
+              <div className = 'title'>I am a &nbsp;
+              {count ? (
+              <Typist avgTypingDelay={50} onTypingDone={() =>  setTimeout(setCount(0), 3000)}>
+                <b>
+                  <span>Software Engineer <span role="img" aria-label="Gear"> ⚙️</span></span>
+                  <Typist.Backspace count={25} delay={800} />
+                  <span bold>Full Stack Developer <span role="img" aria-label="Compuer"> 💻</span></span>
+                  <Typist.Backspace count={25} delay={1600} />
+                  <span bold>Coding BootCamp Mentor <span role="img" aria-label="Mentor"> 👨‍🏫</span></span>
+                </b>
+              </Typist>
+              ) : (
+                ""
+              )}
+          </div>
+            <div className = 'location'><i className="fa fa-map-marker pin"/>
+              Toronto <span role="img" aria-label="Canada">  🇨🇦</span> / 
+              San Francisco <span role="img" aria-label="USA">  🇺🇸 </span>
             </div>
-              <div className = 'location'><i className="fa fa-map-marker pin"/>Toronto <span role="img" aria-label="Canada">  🇨🇦</span></div>
-            </div>
+          </div>
             <div className = 'about'>
                 I'm a {age}-year-old, Chinese-Canadian.
               <br/>
@@ -89,6 +100,7 @@ const Home = () => {
               <span role="img" aria-label="Tech"> 💻 |</span>
               <span role="img" aria-label="Beer"> 🍺 | </span>
               <span role="img" aria-label="Basketball"> 🏀 |</span> 
+              <span role="img" aria-label="Traveling"> ✈️ |</span> 
               <span role="img" aria-label="Coffee"> ☕️</span>
             </div>
           </div>
