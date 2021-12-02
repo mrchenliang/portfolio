@@ -51,7 +51,7 @@ const Home = () => {
     }
     return (
       <div className={`home-page ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-        <div className="home-header">
+        <header className="home-header">
         <ParticleComponent color={darkMode ?  '#fff' : '#333'}/>
         <div className = "home-content">
           <span className = 'toggle'>
@@ -105,7 +105,7 @@ const Home = () => {
           </div>
           </div>
         <Footer darkMode = {darkMode}/>
-        </div>
+        </header>
       </div>
     );
 };
