@@ -8,9 +8,7 @@ import * as serviceWorker from './serviceWorker';
 
 const routing = (
   <Router>
-    <React.StrictMode>
-      <App/>
-    </React.StrictMode>
+    <App/>
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))

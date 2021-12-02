@@ -39,6 +39,7 @@ const Home = () => {
     useEffect(() => {
       setCount(1);
     }, [count]);
+
     useEffect(() => {
       localStorage.setItem('dark', JSON.stringify(darkMode));
     }, [darkMode]);
@@ -49,17 +50,15 @@ const Home = () => {
       return window.matchMedia("(prefers-color-scheme: dark)").matches;
     }
     return (
-      <div className={"home-page", `${darkMode ? 'dark-mode' : 'light-mode'}`}>
-        <header className="home-header">
+      <div className={`home-page ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+        <div className="home-header">
         <ParticleComponent color={darkMode ?  '#fff' : '#333'}/>
         <div className = "home-content">
           <span className = 'toggle'>
             <span onClick={() => setDarkMode(prevMode => !prevMode)}>{darkMode ? '☀️' : '🌚'}</span>
           </span>
           <div className = 'header'>
-          <ReactCSSTransitionGroup
-            transitionName="example" transitionAppear={true}
-            transitionAppearTimeout={700}>
+          <ReactCSSTransitionGroup transitionName="example" transitionAppear={true} transitionAppearTimeout={700} transitionEnterTimeout={700} transitionLeaveTimeout={700}>
             <img src={image} className="headshot" alt="logo" />
           </ReactCSSTransitionGroup>
             <div className = 'info'>
@@ -74,9 +73,9 @@ const Home = () => {
                 <b>
                   <span>Software Engineer <span role="img" aria-label="Gear"> ⚙️</span></span>
                   <Typist.Backspace count={25} delay={800} />
-                  <span bold>Full Stack Developer <span role="img" aria-label="Compuer"> 💻</span></span>
+                  <span>Full Stack Developer <span role="img" aria-label="Compuer"> 💻</span></span>
                   <Typist.Backspace count={25} delay={1600} />
-                  <span bold>Coding BootCamp Mentor <span role="img" aria-label="Mentor"> 👨‍🏫</span></span>
+                  <span>Coding BootCamp Mentor <span role="img" aria-label="Mentor"> 👨‍🏫</span></span>
                 </b>
               </Typist>
               ) : (
@@ -106,7 +105,7 @@ const Home = () => {
           </div>
           </div>
         <Footer darkMode = {darkMode}/>
-        </header>
+        </div>
       </div>
     );
 };
