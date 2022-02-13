@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import './index.css';
 import App from './App';
 // import Project from './Project';
@@ -8,7 +8,13 @@ import * as serviceWorker from './serviceWorker';
 
 const routing = (
   <Router>
-    <App/>
+      <Switch>
+        <Route path='/links' component={() => { window.location = 'https://linktr.ee/chenliang'; return null;} }/>
+        <Route path='/consult' component={() => { window.location = 'https://chenliang.as.me/schedule.php'; return null;} }/>
+        <Route path="/">
+          <App/>
+        </Route>
+      </Switch>
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
