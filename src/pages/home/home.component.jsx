@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import 'font-awesome/css/font-awesome.css';
 import Typist from 'react-typist';
 
-import ParticleComponent from "../../components/particles/ParticleComponent";
+import { ParticleComponent } from "../../components/particles/ParticleComponent.js";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 import image from '../../assets/image.jpeg';
 import Footer from "../../components/footer/footer.component";
@@ -15,10 +15,6 @@ const Home = () => {
 
     const [darkMode, setDarkMode] = useState(getInitialMode())  
     const [count, setCount] = useState(1);
-
-
-    const year = new Date(Date.now() - new Date("02/15/1995").getTime()).getUTCFullYear();  
-    const age = Math.abs(year - 1970);  
 
     function getInitialMode() {
       const isReturningUser = 'dark' in localStorage;
@@ -51,8 +47,8 @@ const Home = () => {
     }
     return (
       <div className={`home-page ${darkMode ? 'dark-mode' : 'light-mode'}`}>
+        <ParticleComponent backgroundColor={darkMode ?  '#333' : '#fff'} color={darkMode ?  '#fff' : '#333'}/>
         <header className="home-header">
-        <ParticleComponent color={darkMode ?  '#fff' : '#333'}/>
         <div className = "home-content">
           <span className = 'toggle'>
             <span onClick={() => setDarkMode(prevMode => !prevMode)}>{darkMode ? '☀️' : '🌚'}</span>
@@ -88,11 +84,11 @@ const Home = () => {
             </div>
           </div>
             <div className = 'about'>
-                I'm a {age}-year-old, Chinese-Canadian.
-              <br/>
                 My passion is to work with talented individuals and solve complex problems with simple, elegant solutions.
               <br/>
                 In my career, I have sought out diverse opportunities to apply my technical skills.
+              <br/>
+                I am in the pursuit of finding long-term sustainable happiness. <span role="img" aria-label="Cloud">  ☁️ </span>
             </div>
             <div className = 'hobbies'>
               I also enjoy: 

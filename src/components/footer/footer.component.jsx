@@ -15,11 +15,11 @@ const Footer = (props) => {
             </a>
           </div>
         </li>
-        <li>
+        {/* <li>
           <div>
             <a href="http://instagram.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-instagram icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{ backgroundColor: darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Instagram</div></i></a>              
           </div>
-        </li>
+        </li> */}
         <li>
           <div>
             <a href="http://twitter.com/mr_chenliang" rel="noopener noreferrer" target="_blank"><i className="fa fa-twitter icon tooltip" style ={{color: darkMode ? '#fff' : '#333', border : darkMode ? '#fff 3px solid': '#333 3px solid'}}><div className = 'tooltiptext' style ={{ backgroundColor: darkMode ? '#fff' : '#333', color: darkMode ? '#333' : '#fff'}}>Twitter</div></i></a>              
