@@ -80,7 +80,7 @@ const Home = () => {
           </div>
             <div className = 'location'><i className="fa fa-map-marker pin"/>
               Toronto <span role="img" aria-label="Canada">  🇨🇦</span> / 
-              San Francisco <span role="img" aria-label="USA">  🇺🇸 </span>
+              New York <span role="img" aria-label="USA">  🇺🇸 </span>
             </div>
           </div>
             <div className = 'about'>
