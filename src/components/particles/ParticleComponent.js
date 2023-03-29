@@ -6,7 +6,6 @@ export const ParticleComponent = (props) => {
   const particlesInit = async (main) => {
     await loadFull(main);
   };
-  console.log(props.color)
 
   return (
   <div
