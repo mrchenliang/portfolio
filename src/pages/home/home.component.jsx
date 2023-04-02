@@ -88,7 +88,7 @@ const Home = () => {
               <br/>
                 In my career, I have sought out diverse opportunities to apply my technical skills.
               <br/>
-                I am in the pursuit of finding long-term sustainable happiness. <span role="img" aria-label="Cloud">  ☁️ </span>
+                {/* I am in the pursuit of finding long-term sustainable happiness. <span role="img" aria-label="Cloud">  ☁️ </span> */}
             </div>
             <div className = 'hobbies'>
               I also enjoy: 
