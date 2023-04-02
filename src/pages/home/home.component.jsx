@@ -93,7 +93,7 @@ const Home = () => {
             <div className = 'hobbies'>
               I also enjoy: 
               <span role="img" aria-label="Tech"> 💻 |</span>
-              <span role="img" aria-label="Beer"> 🍺 | </span>
+              {/* <span role="img" aria-label="Beer"> 🍺 | </span> */}
               <span role="img" aria-label="Basketball"> 🏀 |</span> 
               <span role="img" aria-label="Traveling"> ✈️ |</span> 
               <span role="img" aria-label="Coffee"> ☕️</span>
