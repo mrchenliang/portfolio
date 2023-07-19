@@ -5,7 +5,7 @@ import Typist from 'react-typist';
 
 import { ParticleComponent } from "../../components/particles/ParticleComponent.js";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import image from '../../assets/image.jpeg';
+import image from '../../assets/headshot.png';
 import Footer from "../../components/footer/footer.component";
 
 import './home.styles.css';
