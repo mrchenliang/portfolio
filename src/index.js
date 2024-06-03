@@ -10,8 +10,8 @@ import * as serviceWorker from './serviceWorker';
 const routing = (
   <>
     <Helmet>
-      <title>Chen Liang | Full Stack Software Engineer</title>
-      <meta name="description" content="Chen is a software engineer. His passion is to work with talented individuals and solve complex problems with simple, elegant solutions." />
+      <title>Chen Liang | Senior Software Engineer | Entrepreneur | Mentor</title>
+      <meta name="description" content="Chen is a software engineer. He is energetic, adaptable, and endlessly curious about the world around us; He brings this passion to solving complex problems with simple, elegant solutions." />
     </Helmet>
     <Router>
         <Switch>
