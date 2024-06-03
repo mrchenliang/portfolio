@@ -1,36 +1,19 @@
 
 import React, { useEffect, useState } from 'react';
-import 'font-awesome/css/font-awesome.css';
 import Typist from 'react-typist';
-
-import { ParticleComponent } from "../../components/particles/ParticleComponent.js";
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
-import image from '../../assets/headshot.png';
-import Footer from "../../components/footer/footer.component";
 
+import image from '../../assets/headshot.png';
+import Name from "../../components/name/name.component";
+import Footer from "../../components/footer/footer.component";
+import { getInitialMode } from '../../helpers/darkmode.helpers';
+
+import 'font-awesome/css/font-awesome.css';
 import './home.styles.css';
 
-
 const Home = () => {
-
     const [darkMode, setDarkMode] = useState(getInitialMode())  
     const [count, setCount] = useState(1);
-
-    function getInitialMode() {
-      const isReturningUser = 'dark' in localStorage;
-      const savedMode = JSON.parse(localStorage.getItem('dark'));
-      const userPrefersDark = getPrefColorScheme();
-      // if mode was saved -> dark / light
-      if(isReturningUser) {
-        return savedMode;
-        // if preferred color scheme is dark -> dark
-      } else if (userPrefersDark) {
-        return true;
-        // otherwise -> light
-      } else {
-        return false;
-      }
-    }
 
     useEffect(() => {
       setCount(1);
@@ -39,15 +22,9 @@ const Home = () => {
     useEffect(() => {
       localStorage.setItem('dark', JSON.stringify(darkMode));
     }, [darkMode]);
-  
-  
-    function getPrefColorScheme() {
-      if(!window.matchMedia) return;
-      return window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
+
     return (
       <div className={`home-page ${darkMode ? 'dark-mode' : 'light-mode'}`}>
-        <ParticleComponent backgroundColor={darkMode ?  '#333' : '#fff'} color={darkMode ?  '#fff' : '#333'}/>
         <header className="home-header">
         <div className = "home-content">
           <span className = 'toggle'>
@@ -60,47 +37,47 @@ const Home = () => {
             <div className = 'info'>
               <div>Hello | 你好
                 <div>
-                  My name is <b> Chen Liang</b>
+                  <Name />
                 </div>
               </div>
-              <div className = 'title'>I am a &nbsp;
+              <div className = 'title'>I am a&nbsp;
               {count ? (
-              <Typist avgTypingDelay={50} onTypingDone={() =>  setTimeout(setCount(0), 3000)}>
+              <Typist avgTypingDelay={50} onTypingDone={() =>  setTimeout(setCount(0), 3200)}>
                 <b>
-                  <span>Software Engineer <span role="img" aria-label="Gear"> ⚙️</span></span>
-                  <Typist.Backspace count={25} delay={800} />
-                  <span>Full Stack Developer <span role="img" aria-label="Compuer"> 💻</span></span>
-                  <Typist.Backspace count={25} delay={1600} />
-                  <span>Coding BootCamp Mentor <span role="img" aria-label="Mentor"> 👨‍🏫</span></span>
+                  <span>Senior Software Engineer <span role="img" aria-label="Gear"> ⚙️</span></span>
+                  <Typist.Backspace count={28} delay={1200} />
+                  <span>Sessional Course Instructor <span role="img" aria-label="Books"> 📚</span></span>
+                  <Typist.Backspace count={31} delay={1800} />
+                  <span>Career Mentor <span role="img" aria-label="Mentor"> 👨‍🏫</span></span>
                 </b>
               </Typist>
-              ) : (
-                ""
-              )}
+              ) : null}
           </div>
             <div className = 'location'><i className="fa fa-map-marker pin"/>
               Toronto <span role="img" aria-label="Canada">  🇨🇦</span> / 
               New York <span role="img" aria-label="USA">  🇺🇸 </span>
             </div>
           </div>
-            <div className = 'about'>
-                My passion is to work with talented individuals and solve complex problems with simple, elegant solutions.
+            <div className='about'>
+                I am energetic, adaptable, and endlessly curious about the world around us; I bring this passion to solving complex problems with simple, elegant solutions.
+              {/* <br/>
+                In my career, I have sought out diverse opportunities to apply my technical skills. */}
               <br/>
-                In my career, I have sought out diverse opportunities to apply my technical skills.
               <br/>
-                {/* I am in the pursuit of finding long-term sustainable happiness. <span role="img" aria-label="Cloud">  ☁️ </span> */}
+                Amid the fast pace of our world, I am also in the pursuit of finding long-term sustainable happiness. <span role="img" aria-label="Cloud">  ☁️ </span>
             </div>
-            <div className = 'hobbies'>
-              I also enjoy: 
+            <div className='hobbies'>
+              A few of my hobbies: 
               <span role="img" aria-label="Tech"> 💻 |</span>
               {/* <span role="img" aria-label="Beer"> 🍺 | </span> */}
+              <span role="img" aria-label="Snowboard"> 🏂 | </span>
               <span role="img" aria-label="Basketball"> 🏀 |</span> 
               <span role="img" aria-label="Traveling"> ✈️ |</span> 
               <span role="img" aria-label="Coffee"> ☕️</span>
             </div>
           </div>
           </div>
-        <Footer darkMode = {darkMode}/>
+        <Footer darkMode={darkMode}/>
         </header>
       </div>
     );

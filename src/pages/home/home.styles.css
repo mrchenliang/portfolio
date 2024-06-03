@@ -65,6 +65,10 @@
   line-height: 1.5;
 }
 
+.audio:hover {
+  cursor: pointer;
+}
+
 .pin {
   color: red;
   margin: 8px
@@ -81,6 +85,7 @@
 
 .dark-mode {
   color: #fff;
+  background-color: #333;
   text-align: center;
   transition: all 0.5s ease-in;
 }
@@ -88,6 +93,7 @@
 
 .light-mode {
   color: #333;
+  background-color: #fff;
   text-align: center;
   transition: all 0.5s ease-out;
 }
